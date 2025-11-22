@@ -325,9 +325,9 @@ footer {
   margin-left: 0.25em;
 }
 
-.submenu:hover > .dropdown {
+/* .submenu:hover > .dropdown {
   display: block;
-}
+} */
 
 .dropdown {
   position: absolute;
@@ -486,10 +486,10 @@ footer {
     position: relative;
   }
 
-  .submenu:hover > .dropdown,
+  /* .submenu:hover > .dropdown,
   .submenu:focus-within > .dropdown {
     display: block;
-  }
+  } */
 
   .dropdown {
     position: absolute;
