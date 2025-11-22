@@ -470,7 +470,7 @@ footer {
   }
 
   /* Default: hide dropdown */
-  .dropdown {
+  /* .dropdown {
     display: none;
     position: absolute;
     background-color: var(--accent-color);
@@ -478,6 +478,10 @@ footer {
     padding-left: 1em;
     margin-top: 0.5em;
     z-index: 1000;
+  } */
+
+  .dropdown {
+    display: none;
   }
 
   .dropdown.open {
