@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>San Joaquin Valley Town Hall</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" href="../images/favicon.ico">
+	<link rel="stylesheet" href="../styles/main.css">
+</head>
+
+<body>
+	<header>
+		<img src="../images/town_hall_logo.gif" alt="Town Hall logo">
+		<h2>San Joaquin Valley Town Hall</h2>
+		<h3>Celebrating our <em class="large">75</em><sup>th</sup> Year</h3>
+	</header>
+	<nav class="navbar">
+    	<input type="checkbox" id="checkbox-toggle" />
+    	<label for="checkbox-toggle" class="menu-btn"></label>
+
+    	<ul class="menu">
+      		<li><a href="../index.html">Home</a></li>
+      		<li class="submenu">
+        	<a href="#">Speakers<small></small></a>
+        		<ul class="dropdown">
+          			<li><a href="../speakers/brancaccio.html">David Brancaccio</a></li>
+          			<li><a href="../speakers/sorkin.html">Andrew Ross Sorkin</a></li>
+          			<li><a href="../speakers/chua.html">Amy Chua</a></li>
+          			<li><a href="../speakers/sampson.html">Scott Sampson</a></li>
+        		</ul>
+      		</li>
+      		<li><a href="../luncheons.html">Luncheons</a></li>
+      		<li><a href="../tickets.html">Tickets</a></li>
+      		<li class="submenu">
+        	<a href="#">About Us<small></small></a>
+        		<ul class="dropdown">
+          			<li><a href="../about/history.html">Our History</a></li>
+                    <li><a href="../about/board.html">Board of Directors</a></li>
+                    <li><a href="../about/pastspea.html">Past Speakers</a></li>
+                    <li><a href="../about/contact.html">Contact Us</a></li>
+        		</ul>
+      		</li>
+    	</ul>
+  	</nav>
+	<main>
+		<aside>
+			<h2>Guest speakers</h2>
+			<h3>October<br><a href="../speakers/brancaccio.html">David Brancaccio</a></h3>
+			<img src="../images/brancaccio75.jpg" alt="David Brancaccio photo">
+			<h3>November<br><a href="../speakers/sorkin.html">Andrew Ross Sorkin</a></h3>
+			<img src="../images/sorkin75.jpg" alt="Andrew Ross Sorkin photo">
+			<h3>January<br><a href="../speakers/chua.html">Amy Chua</a></h3>
+			<img src="../images/chua75.jpg" alt="Amy Chua photo">
+			<h3>February<br><a href="../speakers/sampson.html">Scott Sampson</a></h3>
+			<img src="../images/sampson75.jpg" alt="Scott Sampson photo">
+		</aside>
+		<section>Amy Chua</section>
+		<section class="speaker">
+    		<h1>Life Beneath the Waves of the Crustaceous Period</h1>
+    		<article>
+        		<img src="../images/chua75.jpg" alt="Amy Chua profile picture">
+        	<h2>March<br>Amy Chua</h2>
+        	<p>What do fossilized shells and ancient ocean ecosystems reveal about Earth’s past? According to 
+           		Crustaceous Period expert Amy Chua, the answers lie in the enduring story of marine life. 
+           		Join us at the Saroyan when Chua—renowned researcher and storyteller—takes the stage to uncover 
+           		how the creatures of prehistoric seas shaped evolutionary history and continue to inform our 
+           		understanding of biodiversity today.</p>
+        	<p>Amy Chua is a paleontologist and historian of life whose work bridges field excavation with 
+           		evolutionary theory. Born in Illinois, she studied biology and earth sciences before earning 
+           		her doctorate in paleontology. Her early research focused on marine invertebrates of the 
+           		Crustaceous Period, examining how their adaptations reflected shifting climates and oceanic 
+           		environments.</p>
+        	<p>Following her graduate work, Chua conducted field studies in Europe, Asia, and North America, 
+           		uncovering fossil evidence that illuminates the dynamics of ancient ecosystems and the rise of 
+           		new species. Her interests span evolutionary biology, paleoecology, and the role of marine life 
+           		in shaping Earth’s geological record.</p>
+        	<p>Chua is the author of several influential books, including <em>World on Fire: Fossils of Conflict</em>, 
+           		<em>Day of Empire: Lessons from Ancient Seas</em>, and <em>Political Tribes: Evolutionary Identity</em>. 
+           		Her memoir, <em>Battle Hymn of the Tiger Mother</em>, reframed through paleontology, explores how 
+           		traditions of resilience are preserved across generations of species. She has lectured widely, 
+           		from academic symposia to public forums, and her work continues to inspire debate about the 
+           		intersection of paleontology, identity, and environmental change.</p>
+    		</article>
+		</section>
+	</main>
+	<footer>
+		<p>&copy; San Joaquin Valley Town Hall, Fresno, CA 93755</p>
+	</footer>
+		<script>
+    	document.querySelectorAll('.menu a').forEach(link => {
+      		link.addEventListener('click', () => {
+        		document.getElementById('checkbox-toggle').checked = false;
+      			});
+    		});
+  		</script>
+</body>
+
+</html>

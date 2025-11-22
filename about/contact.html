@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>San Joaquin Valley Paleontologist Club - Contact Us</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="../images/favicon.ico">
+  <link rel="stylesheet" href="../styles/main.css">
+</head>
+
+<body>
+  <header>
+    <img src="../images/town_hall_logo.gif" alt="Club logo">
+    <h2>San Joaquin Valley Paleontologist Club</h2>
+    <h3>Celebrating our <em class="large">75</em><sup>th</sup> Year</h3>
+  </header>
+
+  <nav class="navbar">
+    <input type="checkbox" id="checkbox-toggle" />
+    <label for="checkbox-toggle" class="menu-btn"></label>
+
+    <ul class="menu">
+      <li><a href="../index.html">Home</a></li>
+      <li class="submenu">
+        <a href="#">Speakers<small></small></a>
+        <ul class="dropdown">
+          <li><a href="../speakers/brancaccio.html">David Brancaccio</a></li>
+          <li><a href="../speakers/sorkin.html">Andrew Ross Sorkin</a></li>
+          <li><a href="../speakers/chua.html">Amy Chua</a></li>
+          <li><a href="../speakers/sampson.html">Scott Sampson</a></li>
+        </ul>
+      </li>
+      <li><a href="../luncheons.html">Luncheons</a></li>
+      <li><a href="../tickets.html">Tickets</a></li>
+      <li class="submenu">
+        <a href="#">About Us<small></small></a>
+        <ul class="dropdown">
+          <li><a href="../about/history.html">Our History</a></li>
+          <li><a href="../about/board.html">Board of Directors</a></li>
+          <li><a href="../about/pastspea.html">Past Speakers</a></li>
+          <li><a class="../about/current">Contact Us</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+  <main>
+    <section id="contact">
+      <h1>Contact Us</h1>
+      <p>The San Joaquin Valley Paleontologist Club values communication with our members, guests, and 
+         community partners. Whether you have questions about upcoming lectures, want to volunteer, 
+         or simply wish to learn more about fossils and paleontology, we welcome your outreach.</p>
+
+      <h2>Mailing Address</h2>
+      <p>San Joaquin Valley Paleontologist Club<br>
+         P.O. Box 93755<br>
+         Fresno, CA 93755</p>
+
+      <h2>Email</h2>
+      <p>General Inquiries: <a href="mailto:info@sjvpaleo.org">info@sjvpaleo.org</a><br>
+         Membership: <a href="mailto:membership@sjvpaleo.org">membership@sjvpaleo.org</a><br>
+         Events & Speakers: <a href="mailto:events@sjvpaleo.org">events@sjvpaleo.org</a></p>
+
+      <h2>Phone</h2>
+      <p>(559) 555-1975<br>
+         Office hours: Monday–Friday, 9:00 AM – 4:00 PM</p>
+
+      <h2>Stay Connected</h2>
+      <p>Follow us on social media to keep up with the latest fossil discoveries, speaker announcements, 
+         and community events:</p>
+      <ul>
+        <li><a href="#">Facebook: San Joaquin Valley Paleontologist Club</a></li>
+        <li><a href="#">Twitter: @SJVPaleoClub</a></li>
+        <li><a href="#">Instagram: @SJVPaleoClub</a></li>
+      </ul>
+
+      <h2>Visit Us</h2>
+      <p>Our lectures and events are held at the historic Saroyan Theatre in downtown Fresno. 
+         We encourage you to attend, meet fellow enthusiasts, and share in the excitement of 
+         paleontology. Directions and parking information are available on our Tickets page.</p>
+
+      <h2>Get Involved</h2>
+      <p>We invite you to become part of our community. Volunteer opportunities include assisting 
+         at events, helping with educational outreach, and supporting field trips. Membership 
+         packages are available for individuals, families, and patrons who wish to support our 
+         mission of bringing paleontology to the San Joaquin Valley.</p>
+
+      <p>We look forward to hearing from you and welcoming you into our community of fossil 
+         enthusiasts and lifelong learners.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; San Joaquin Valley Paleontologist Club, Fresno, CA 93755</p>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.getElementById('checkbox-toggle').checked = false;
+      });
+    });
+  </script>
+</body>
+</html>

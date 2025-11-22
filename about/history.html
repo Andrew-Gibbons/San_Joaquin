@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>San Joaquin Valley Paleontologist Club - Our History</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="../images/favicon.ico">
+  <link rel="stylesheet" href="../styles/main.css">
+</head>
+
+<body>
+  <header>
+    <img src="../images/town_hall_logo.gif" alt="Club logo">
+    <h2>San Joaquin Valley Paleontologist Club</h2>
+    <h3>Celebrating our <em class="large">75</em><sup>th</sup> Year</h3>
+  </header>
+
+  <nav class="navbar">
+    <input type="checkbox" id="checkbox-toggle" />
+    <label for="checkbox-toggle" class="menu-btn"></label>
+
+    <ul class="menu">
+      <li><a href="../index.html">Home</a></li>
+      <li class="submenu">
+        <a href="#">Speakers<small></small></a>
+        <ul class="dropdown">
+          <li><a href="../speakers/brancaccio.html">David Brancaccio</a></li>
+          <li><a href="../speakers/sorkin.html">Andrew Ross Sorkin</a></li>
+          <li><a href="../speakers/chua.html">Amy Chua</a></li>
+          <li><a href="../speakers/sampson.html">Scott Sampson</a></li>
+        </ul>
+      </li>
+      <li><a href="../luncheons.html">Luncheons</a></li>
+      <li><a href="../tickets.html">Tickets</a></li>
+      <li class="submenu">
+        <a href="#">About Us<small></small></a>
+        <ul class="dropdown">
+          <li><a class="current">Our History</a></li>
+          <li><a href="../about/board.html">Board of Directors</a></li>
+          <li><a href="../about/pastspea.html">Past Speakers</a></li>
+          <li><a href="../about/contact.html">Contact Us</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+  <main>
+    <section id="history">
+      <h1>Our History</h1>
+      <p>The San Joaquin Valley Paleontologist Club was founded in 1950 by a small group of 
+         fossil enthusiasts, educators, and researchers who shared a passion for uncovering 
+         the deep history of life on Earth. What began as informal gatherings in Fresno 
+         quickly grew into a thriving organization dedicated to paleontology and science 
+         education.</p>
+
+      <p>Over the decades, the Club has hosted lectures, field trips, and community events 
+         that highlight discoveries from the Cretaceous seas to the Ice Age plains. Members 
+         have collaborated with universities, museums, and local schools to bring fossils 
+         and evolutionary science to the public, inspiring generations of students and 
+         amateur scientists.</p>
+
+      <p>In the 1970s, the Club expanded its reach by organizing annual symposia, inviting 
+         nationally recognized paleontologists to share their research. These events helped 
+         establish the San Joaquin Valley as a hub for scientific dialogue and discovery. 
+         Today, the Club continues to celebrate the wonders of paleontology, connecting 
+         professional researchers with curious minds across the Valley.</p>
+
+      <p>As we mark our 75th year, we remain committed to our founding vision: to explore, 
+         preserve, and share the fossil record, ensuring that the stories of ancient life 
+         continue to inspire future generations.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; San Joaquin Valley Paleontologist Club, Fresno, CA 93755</p>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.getElementById('checkbox-toggle').checked = false;
+      });
+    });
+  </script>
+</body>
+</html>
