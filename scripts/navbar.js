@@ -1,7 +1,6 @@
 document.querySelectorAll('.submenu > a').forEach(link => {
   link.addEventListener('click', function (e) {
-    // Prevent navigation if the link is meant to open a dropdown
-    e.preventDefault();
+    e.preventDefault(); // stop "#" navigation
 
     const dropdown = this.nextElementSibling;
 

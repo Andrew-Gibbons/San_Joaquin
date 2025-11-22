@@ -398,7 +398,7 @@ footer {
     position: static;
     width: 100%;
     display: none;
-}
+  }
 
   .navbar a {
     margin: 0 1px 2px;
@@ -412,9 +412,9 @@ footer {
     margin-right: 0;
   }
 
-  .submenu:hover > .dropdown {
+  /* .submenu:hover > .dropdown {
     display: none;
-  }
+  } */
 
 .submenu > a:focus + .dropdown,
 .submenu > a:active + .dropdown {
