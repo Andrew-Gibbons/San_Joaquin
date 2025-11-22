@@ -7,12 +7,11 @@ document.querySelectorAll('.submenu > a').forEach(link => {
     // Close other dropdowns
     document.querySelectorAll('.dropdown').forEach(menu => {
       if (menu !== dropdown) {
-        menu.style.display = 'none';
+        menu.classList.remove('open');
       }
     });
 
     // Toggle the clicked dropdown
-    dropdown.style.display =
-      dropdown.style.display === 'block' ? 'none' : 'block';
+    dropdown.classList.toggle('open');
   });
 });

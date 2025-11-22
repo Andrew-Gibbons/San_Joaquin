@@ -479,6 +479,10 @@ footer {
     margin-top: 0.5em;
     z-index: 1000;
   }
+
+  .dropdown.open {
+    display: block;
+  }
 }
 
 @media only screen and (min-width: 893px) {
