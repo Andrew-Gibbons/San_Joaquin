@@ -1,28 +1,26 @@
-// 1. Close hamburger menu when a top-level link is clicked (but not submenu parents)
-document.querySelectorAll('.menu > li:not(.submenu) > a').forEach(link => {
-  link.addEventListener('click', () => {
-    document.getElementById('checkbox-toggle').checked = false;
-  });
-});
-
-// 2. Toggle dropdown when submenu parent is clicked
-document.querySelectorAll('.submenu > a').forEach(link => {
-  link.addEventListener('click', function (e) {
-    e.preventDefault(); // stop "#" navigation
-
-    const dropdown = this.nextElementSibling;
-
-    // Close other dropdowns
-    document.querySelectorAll('.dropdown').forEach(menu => {
-      if (menu !== dropdown) {
-        menu.classList.remove('open');
+  // Close menu when a normal link is clicked (but not submenu toggles)
+  document.querySelectorAll('.menu a').forEach(link => {
+    link.addEventListener('click', (e) => {
+      if (!link.classList.contains('submenu-toggle')) {
+        document.getElementById('checkbox-toggle').checked = false;
       }
     });
-
-    // Toggle the clicked dropdown
-    dropdown.classList.toggle('open');
-
-    // Optional: flip arrow indicator
-    this.parentElement.classList.toggle('open');
   });
-});
+
+  // Toggle dropdowns when submenu toggles are clicked
+  document.querySelectorAll('.submenu-toggle').forEach(toggle => {
+    toggle.addEventListener('click', (e) => {
+      e.preventDefault(); // prevent default link behavior
+      const dropdown = toggle.nextElementSibling;
+
+      // Close other open dropdowns if you want only one open at a time
+      document.querySelectorAll('.dropdown.open').forEach(openDropdown => {
+        if (openDropdown !== dropdown) {
+          openDropdown.classList.remove('open');
+        }
+      });
+
+      // Toggle the clicked one
+      dropdown.classList.toggle('open');
+    });
+  });
