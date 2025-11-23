@@ -106,12 +106,23 @@
     <p>&copy; San Joaquin Valley Town Hall, Fresno, CA 93755</p>
   </footer>
   <script>
+    // Close menu when a normal link is clicked
     document.querySelectorAll('.menu a:not(.submenu-toggle)').forEach(link => {
       link.addEventListener('click', () => {
         document.getElementById('checkbox-toggle').checked = false;
       });
     });
+
+    // Toggle dropdowns when submenu toggles are clicked
+    document.querySelectorAll('.submenu-toggle').forEach(toggle => {
+      toggle.addEventListener('click', (e) => {
+        e.preventDefault(); // prevent default link behavior
+        const dropdown = toggle.nextElementSibling;
+        dropdown.classList.toggle('open');
+      });
+    });
   </script>
+
     <!-- External script for submenu click logic -->
   <!-- <script src="scripts/navbar.js"></script> -->
 </body>
