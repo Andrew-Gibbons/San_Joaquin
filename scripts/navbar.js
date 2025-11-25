@@ -1,77 +1,55 @@
-// Accessible, polished navbar logic
-(function () {
-  const checkbox = document.getElementById('checkbox-toggle');
-  const toggles = Array.from(document.querySelectorAll('.submenu-toggle'));
+  // Close menu when a normal link is clicked (but not submenu toggles)
+  // document.querySelectorAll('.menu a').forEach(link => {
+  //   link.addEventListener('click', (e) => {
+  //     if (!link.classList.contains('submenu-toggle')) {
+  //       document.getElementById('checkbox-toggle').checked = false;
+  //     }
+  //   });
+  // });
 
-  // Helper: close all dropdowns
-  function closeAllDropdowns(exceptId = null) {
-    document.querySelectorAll('.dropdown').forEach(dd => {
-      if (!exceptId || dd.id !== exceptId) {
-        dd.classList.remove('open');
-        dd.hidden = true; /* NEW */
+  // Toggle dropdowns when submenu toggles are clicked
+  // document.querySelectorAll('.submenu-toggle').forEach(toggle => {
+  //   toggle.addEventListener('click', (e) => {
+  //     e.preventDefault(); // prevent default link behavior
+  //     const dropdown = toggle.nextElementSibling;
+
+      // Close other open dropdowns if you want only one open at a time
+      // document.querySelectorAll('.dropdown.open').forEach(openDropdown => {
+      //   if (openDropdown !== dropdown) {
+      //     openDropdown.classList.remove('open');
+      //   }
+      // });
+
+      // Toggle the clicked one
+  //     dropdown.classList.toggle('open');
+  //   });
+  // });
+
+  document.addEventListener('DOMContentLoaded', () => {
+  // Close menu when a normal link is clicked (but not submenu toggles)
+  document.querySelectorAll('.menu a').forEach(link => {
+    link.addEventListener('click', (e) => {
+      if (!link.classList.contains('submenu-toggle')) {
+        document.getElementById('checkbox-toggle').checked = false;
       }
     });
-    toggles.forEach(t => t.setAttribute('aria-expanded', 'false'));
-  }
+  });
 
-  // Toggle handler
-  function toggleDropdown(e, toggleEl) {
-    e.preventDefault();
-    const targetId = toggleEl.getAttribute('aria-controls');
-    const dropdown = document.getElementById(targetId);
-    const isOpen = dropdown.classList.contains('open');
+  // Toggle dropdowns when submenu toggles are clicked
+  document.querySelectorAll('.submenu-toggle').forEach(toggle => {
+    toggle.addEventListener('click', (e) => {
+      e.preventDefault(); // prevent default link behavior
+      const dropdown = toggle.nextElementSibling;
 
-    closeAllDropdowns(targetId);
-    dropdown.classList.toggle('open', !isOpen);
-    dropdown.hidden = isOpen; /* NEW */
-    toggleEl.setAttribute('aria-expanded', !isOpen ? 'true' : 'false');
+      // Close other open dropdowns if you want only one open at a time
+      document.querySelectorAll('.dropdown.open').forEach(openDropdown => {
+        if (openDropdown !== dropdown) {
+          openDropdown.classList.remove('open');
+        }
+      });
 
-    // NEW: focus first link when opening
-    if (!isOpen) {
-      const firstLink = dropdown.querySelector('a');
-      if (firstLink) firstLink.focus();
-    }
-  }
-
-  // Wire up events
-  toggles.forEach(toggleEl => {
-    toggleEl.addEventListener('click', e => toggleDropdown(e, toggleEl));
-    toggleEl.addEventListener('keydown', e => {
-      if (e.key === ' ' || e.key === 'Enter') toggleDropdown(e, toggleEl);
-      if (e.key === 'Escape') closeAllDropdowns();
+      // Toggle the clicked one
+      dropdown.classList.toggle('open');
     });
   });
-
-  // Close menu when a normal link is clicked
-  document.querySelectorAll('.menu a').forEach(link => {
-    link.addEventListener('click', () => {
-      if (checkbox) checkbox.checked = false;
-      closeAllDropdowns();
-    });
-  });
-
-  // Click outside closes dropdowns
-  document.addEventListener('click', e => {
-    if (!e.target.closest('.navbar')) {
-      closeAllDropdowns();
-      if (checkbox) checkbox.checked = false;
-    }
-  });
-
-  // NEW: global Escape closes everything
-  document.addEventListener('keydown', e => {
-    if (e.key === 'Escape') {
-      closeAllDropdowns();
-      if (checkbox) checkbox.checked = false;
-    }
-  });
-
-  // Handle resize
-  function handleResize() {
-    const isDesktop = window.matchMedia('(min-width: 893px)').matches;
-    if (isDesktop) closeAllDropdowns();
-  }
-  window.addEventListener('resize', handleResize);
-  handleResize();
-})();
-
+});
