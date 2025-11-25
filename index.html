@@ -15,128 +15,60 @@
     <h3>Celebrating our <em class="large">75</em><sup>th</sup> Year</h3>
   </header>
 
-  <nav class="navbar">
+  <nav class="navbar" aria-label="Primary">
     <input type="checkbox" id="checkbox-toggle" />
-    <label for="checkbox-toggle" class="menu-btn"></label>
+    <label for="checkbox-toggle" class="menu-btn" aria-label="Toggle navigation"></label>
 
-    <ul class="menu">
-      <li><a class="current">Home</a></li>
-      <li class="submenu">
-        <a class="submenu-toggle">Speakers<small></small></a>
-        <ul class="dropdown">
-          <li><a href="speakers/brancaccio.html">David Brancaccio</a></li>
-          <li><a href="speakers/sorkin.html">Andrew Ross Sorkin</a></li>
-          <li><a href="speakers/chua.html">Amy Chua</a></li>
-          <li><a href="speakers/sampson.html">Scott Sampson</a></li>
+    <ul class="menu" role="menubar">
+      <li role="none"><a class="current" href="index.html" role="menuitem">Home</a></li>
+
+      <li class="submenu" role="none">
+        <a
+          class="submenu-toggle"
+          href="#speakers-menu"
+          role="menuitem"
+          aria-haspopup="true"
+          aria-expanded="false"
+          aria-controls="speakers-menu"
+        >Speakers<small></small></a>
+        <ul id="speakers-menu" class="dropdown" role="menu" aria-label="Speakers submenu">
+          <li role="none"><a href="speakers/brancaccio.html" role="menuitem">David Brancaccio</a></li>
+          <li role="none"><a href="speakers/sorkin.html" role="menuitem">Andrew Ross Sorkin</a></li>
+          <li role="none"><a href="speakers/chua.html" role="menuitem">Amy Chua</a></li>
+          <li role="none"><a href="speakers/sampson.html" role="menuitem">Scott Sampson</a></li>
         </ul>
       </li>
-      <li><a href="luncheons.html">Luncheons</a></li>
-      <li><a href="tickets.html">Tickets</a></li>
-      <li class="submenu">
-        <a class="submenu-toggle">About Us<small></small></a>
-        <ul class="dropdown">
-          <li><a href="about/history.html">Our History</a></li>
-          <li><a href="about/board.html">Board of Directors</a></li>
-          <li><a href="about/pastspea.html">Past Speakers</a></li>
-          <li><a href="about/contact.html">Contact Us</a></li>
+
+      <li role="none"><a href="luncheons.html" role="menuitem">Luncheons</a></li>
+      <li role="none"><a href="tickets.html" role="menuitem">Tickets</a></li>
+
+      <li class="submenu" role="none">
+        <a
+          class="submenu-toggle"
+          href="#about-menu"
+          role="menuitem"
+          aria-haspopup="true"
+          aria-expanded="false"
+          aria-controls="about-menu"
+        >About Us<small></small></a>
+        <ul id="about-menu" class="dropdown" role="menu" aria-label="About us submenu">
+          <li role="none"><a href="about/history.html" role="menuitem">Our History</a></li>
+          <li role="none"><a href="about/board.html" role="menuitem">Board of Directors</a></li>
+          <li role="none"><a href="about/pastspea.html" role="menuitem">Past Speakers</a></li>
+          <li role="none"><a href="about/contact.html" role="menuitem">Contact Us</a></li>
         </ul>
       </li>
     </ul>
   </nav>
 
   <main>
-    <aside>
-      <h2>Guest speakers</h2>
-      <h3>October<br><a href="speakers/brancaccio.html">David Brancaccio</a></h3>
-      <img src="images/brancaccio75.jpg" alt="David Brancaccio photo">
-      <h3>November<br><a href="speakers/sorkin.html">Andrew Ross Sorkin</a></h3>
-      <img src="images/sorkin75.jpg" alt="Andrew Ross Sorkin photo">
-      <h3>January<br><a href="speakers/chua.html">Amy Chua</a></h3>
-      <img src="images/chua75.jpg" alt="Amy Chua photo">
-      <h3>February<br><a href="speakers/sampson.html">Scott Sampson</a></h3>
-      <img src="images/sampson75.jpg" alt="Scott Sampson photo">
-    </aside>
-
-    <section id="mission">
-      <h2>Our Mission</h2>
-      <p>San Joaquin Valley Town Hall is a non-profit organization that is run by an
-        all-volunteer board of directors. Our mission is to bring nationally and
-        internationally renowned, thought-provoking speakers who inform, educate,
-        and entertain our audience! As one of our members told us:</p>
-      <blockquote>&ldquo;Each year I give a ticket package to each of our family members.
-        I think of it as the gift of knowledge...and that is priceless.&rdquo;</blockquote>
-    </section>
-
-    <section id="featured-speaker">
-      <h1>Featured Speaker</h1>
-      <article class="featured">
-        <h2>Fossil Threads in the Web of Life</h2>
-
-        <!-- <img src="images/sampson_dinosaur.jpg" alt="Scott Sampson with dinosaur"> -->
-				<figure>
-          <video controls poster="images/sampson_dinosaur.jpg">
-            <source src="media/sampson.mp4" type="video/mp4">
-            <img src="images/sampson_dinosaur.jpg" alt="Scott Sampson with dinosaur">
-            Your browser does not support the video tag.
-          </video>
-          <figcaption>Scott Sampson and friend.</figcaption>
-        </figure>
-
-        <h3>February<br>Scott Sampson</h3>
-        <p>What's 75 million years old and brand spanking new? A teenage Utahceratops!
-          Come to the Saroyan, armed with your best dinosaur roar, when Scott Sampson, Research
-          Curator at the Utah Museum of Natural History, steps to the podium. Sampson's research
-          has focused on the ecology and evolution of late Cretaceous dinosaurs and he has conducted
-          fieldwork in a number of countries in Africa.</p>
-        <p><a href="speakers/sampson.html">Read more...</a>&nbsp;<strong>Or meet us there!</strong></p>
-      </article>
-    </section>
-
-    <section id="ticket-packages">
-      <h2>Our Ticket Packages</h2>
-      <ul>
-        <li>Season Package: $95</li>
-        <li>Patron Package: $200</li>
-        <li>Single Speaker: $25</li>
-      </ul>
-    </section>
+    <!-- your existing content -->
   </main>
 
   <footer>
     <p>&copy; San Joaquin Valley Town Hall, Fresno, CA 93755</p>
   </footer>
-  <!-- <script>
-  // Close menu when a normal link is clicked (but not submenu toggles)
-  document.querySelectorAll('.menu a').forEach(link => {
-    link.addEventListener('click', (e) => {
-      if (!link.classList.contains('submenu-toggle')) {
-        document.getElementById('checkbox-toggle').checked = false;
-      }
-    });
-  });
 
-  // Toggle dropdowns when submenu toggles are clicked
-  document.querySelectorAll('.submenu-toggle').forEach(toggle => {
-    toggle.addEventListener('click', (e) => {
-      e.preventDefault(); // prevent default link behavior
-      const dropdown = toggle.nextElementSibling;
-
-      // Close other open dropdowns if you want only one open at a time
-      document.querySelectorAll('.dropdown.open').forEach(openDropdown => {
-        if (openDropdown !== dropdown) {
-          openDropdown.classList.remove('open');
-        }
-      });
-
-      // Toggle the clicked one
-      dropdown.classList.toggle('open');
-    });
-  });
-</script> -->
-
-
-
-    <!-- External script for submenu click logic -->
   <script src="scripts/navbar.js"></script>
 </body>
 </html>
