@@ -1,85 +1,77 @@
-// Accessible, unified dropdown logic for mobile and desktop
-
+// Accessible, polished navbar logic
 (function () {
   const checkbox = document.getElementById('checkbox-toggle');
-  const menu = document.querySelector('.menu');
   const toggles = Array.from(document.querySelectorAll('.submenu-toggle'));
 
   // Helper: close all dropdowns
   function closeAllDropdowns(exceptId = null) {
-    document.querySelectorAll('.dropdown.open').forEach(dd => {
+    document.querySelectorAll('.dropdown').forEach(dd => {
       if (!exceptId || dd.id !== exceptId) {
         dd.classList.remove('open');
+        dd.hidden = true; /* NEW */
       }
     });
     toggles.forEach(t => t.setAttribute('aria-expanded', 'false'));
   }
 
-  // Toggle handler (click or keyboard)
+  // Toggle handler
   function toggleDropdown(e, toggleEl) {
     e.preventDefault();
     const targetId = toggleEl.getAttribute('aria-controls');
     const dropdown = document.getElementById(targetId);
     const isOpen = dropdown.classList.contains('open');
 
-    // Close others, then toggle this one
     closeAllDropdowns(targetId);
     dropdown.classList.toggle('open', !isOpen);
+    dropdown.hidden = isOpen; /* NEW */
     toggleEl.setAttribute('aria-expanded', !isOpen ? 'true' : 'false');
+
+    // NEW: focus first link when opening
+    if (!isOpen) {
+      const firstLink = dropdown.querySelector('a');
+      if (firstLink) firstLink.focus();
+    }
   }
 
-  // Wire up events for each submenu toggle
+  // Wire up events
   toggles.forEach(toggleEl => {
-    // Click/tap
     toggleEl.addEventListener('click', e => toggleDropdown(e, toggleEl));
-
-    // Keyboard: Space/Enter
     toggleEl.addEventListener('keydown', e => {
-      const key = e.key;
-      if (key === ' ' || key === 'Enter') {
-        toggleDropdown(e, toggleEl);
-      }
-      // Escape closes current
-      if (key === 'Escape') {
-        const targetId = toggleEl.getAttribute('aria-controls');
-        const dropdown = document.getElementById(targetId);
-        dropdown.classList.remove('open');
-        toggleEl.setAttribute('aria-expanded', 'false');
-        toggleEl.focus();
-      }
+      if (e.key === ' ' || e.key === 'Enter') toggleDropdown(e, toggleEl);
+      if (e.key === 'Escape') closeAllDropdowns();
     });
   });
 
-  // Close menu when a normal link is clicked (not submenu toggles)
+  // Close menu when a normal link is clicked
   document.querySelectorAll('.menu a').forEach(link => {
     link.addEventListener('click', () => {
-      // Close mobile menu
       if (checkbox) checkbox.checked = false;
-      // Close all dropdowns
       closeAllDropdowns();
     });
   });
 
-  // Click outside closes dropdowns (desktop & mobile)
+  // Click outside closes dropdowns
   document.addEventListener('click', e => {
-    const withinNavbar = e.target.closest('.navbar');
-    if (!withinNavbar) {
+    if (!e.target.closest('.navbar')) {
       closeAllDropdowns();
       if (checkbox) checkbox.checked = false;
     }
   });
 
-  // Manage dropdowns based on viewport changes:
-  // On desktop, keep dropdowns closed by default until toggled.
-  // On mobile, behavior stays the same (toggle per tap).
+  // NEW: global Escape closes everything
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') {
+      closeAllDropdowns();
+      if (checkbox) checkbox.checked = false;
+    }
+  });
+
+  // Handle resize
   function handleResize() {
     const isDesktop = window.matchMedia('(min-width: 893px)').matches;
-    if (isDesktop) {
-      // Ensure menu is visible (CSS handles layout); close any open dropdowns
-      closeAllDropdowns();
-    }
+    if (isDesktop) closeAllDropdowns();
   }
-
   window.addEventListener('resize', handleResize);
   handleResize();
 })();
+

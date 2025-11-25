@@ -63,6 +63,15 @@ header img { display: none; }
   text-decoration: none;
   margin: 0 2px 2px 0;
 }
+
+/* NEW: focus-visible for keyboard users */
+.navbar a:focus-visible {
+  outline: 2px solid var(--gradient-color);
+  outline-offset: 2px;
+  font-style: italic;
+  color: var(--accent-color);
+}
+
 .navbar a:link,
 .navbar a:visited { color: var(--light_menu); }
 .navbar a:hover,
@@ -97,12 +106,16 @@ header img { display: none; }
 .submenu small { margin-left: 0.25em; }
 .submenu small::after { content: "\25b6"; } /* right triangle (mobile default) */
 
+/* Dropdowns hidden by default */
+.dropdown[hidden] { display: none; }  /* NEW */
+
+/* Existing dropdown styles */
 .dropdown {
-  display: none;
   background-color: var(--accent-color);
   color: var(--light_menu);
   position: static; /* mobile: stack under parent */
 }
+
 .dropdown > li a { margin: 2px; display: block; white-space: nowrap; }
 
 /* Toggle class used by JS */
