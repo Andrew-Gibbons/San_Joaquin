@@ -22,7 +22,7 @@
     <ul class="menu">
       <li><a href="../index.html">Home</a></li>
       <li class="submenu">
-        <a href="#">Speakers<small></small></a>
+        <a href="#" class="submenu-toggle">Speakers<small></small></a>
         <ul class="dropdown">
           <li><a href="../speakers/brancaccio.html">David Brancaccio</a></li>
           <li><a href="../speakers/sorkin.html">Andrew Ross Sorkin</a></li>
@@ -33,7 +33,7 @@
       <li><a href="../luncheons.html">Luncheons</a></li>
       <li><a href="../tickets.html">Tickets</a></li>
       <li class="submenu">
-        <a href="#">About Us<small></small></a>
+        <a href="#" class="submenu-toggle">About Us<small></small></a>
         <ul class="dropdown">
           <li><a href="../about/history.html">Our History</a></li>
           <li><a href="../about/board.html">Board of Directors</a></li>
@@ -96,13 +96,15 @@
     <p>&copy; San Joaquin Valley Paleontologist Club, Fresno, CA 93755</p>
   </footer>
 
-  <script>
+  <!-- <script>
     document.querySelectorAll('.menu a').forEach(link => {
       link.addEventListener('click', () => {
         document.getElementById('checkbox-toggle').checked = false;
       });
     });
-  </script>
+  </script> -->
+  <!-- External script for submenu click logic -->
+  <script src="scripts/navbar.js"></script>
 </body>
 </html>
 
