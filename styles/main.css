@@ -271,15 +271,21 @@ footer {
 	& a:link, a:visited { 
 		color: var(--light_menu);
 	}
-	& a:hover, a:focus, a:not([href]) {
+	/* & a:hover, a:focus, a:not([href]) {
 		background-color: var(--mid_menu);
 		color: var(--dark_menu);
-	}
+	} */
 	& ul {
 		list-style-type: none;
 		padding: 0;
 		margin: 0;
 	}
+  /* Only apply hover/focus highlight to normal links, not submenu toggles */
+  & a:hover:not(.submenu-toggle),
+  & a:focus:not(.submenu-toggle) {
+    background-color: var(--mid_menu);
+    color: var(--dark_menu);
+  }
 }
 
 .menu {
