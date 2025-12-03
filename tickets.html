@@ -15,10 +15,11 @@
 		<h2>San Joaquin Valley Town Hall</h2>
 		<h3>Celebrating our <em class="large">75</em><sup>th</sup> Year</h3>
 	</header>
+
+		<!-- Create navbar, menu, submenu, and dropdown classes -->	
 	    <nav class="navbar">
             <input type="checkbox" id="checkbox-toggle" />
             <label for="checkbox-toggle" class="menu-btn"></label>
-
             <ul class="menu">
                 <li><a href="index.html">Home</a></li>
                 <li class="submenu">
@@ -43,7 +44,9 @@
             </li>
             </ul>
         </nav>
+
     <main>
+		<!-- Speaker section -->
 		<aside>
 			<h2>Guest speakers</h2>
 			<div id="speakers">
@@ -57,6 +60,8 @@
 			<img src="images/sampson75.jpg" alt="Scott Sampson photo">
 			</div>
 		</aside>
+
+		<!-- Order form section -->
 		<section>
 			<h1>Order Form</h1>
 			<form action="order_tickets.html" method="get">
@@ -78,9 +83,9 @@
        					pattern="\d{3}-\d{3}-\d{4}"
        					title="Phone number must be in the format 999-999-9999">
 				</fieldset>
+
 				<fieldset>
   					<legend>Ordering Information</legend>
-
   					<label for="order_type">Order Type:</label>
   					<select name="order_type" id="order_type">
     					<option value="base">Base Package</option>
@@ -92,6 +97,7 @@
   					<input type="number" name="ticket_quantity" id="ticket_quantity"
          				value="1" min="1" max="100">
 				</fieldset>
+
 				<fieldset>
   				<legend>Payment Information</legend>
 
@@ -136,19 +142,17 @@
 				<!-- Submit button -->
 				<button type="submit">Submit Order</button>
 			</form>
+
 		</section>
+
 	</main>
+
 	<footer>
 		<p>&copy; San Joaquin Valley Town Hall, Fresno, CA 93755</p>
 	</footer>
-	<!-- <script>
-  		document.querySelectorAll('.menu a').forEach(link => {
-    		link.addEventListener('click', () => {
-      	document.getElementById('checkbox-toggle').checked = false;
-    	});
-  	});
-	</script> -->
-	  	<!-- External script for submenu click logic -->
+
   	<script src="scripts/navbar.js"></script>
+
 </body>
+
 </html>

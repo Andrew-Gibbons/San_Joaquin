@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <title>San Joaquin Valley Paleontologist Club - Our History</title>
@@ -15,10 +16,10 @@
     <h3>Celebrating our <em class="large">75</em><sup>th</sup> Year</h3>
   </header>
 
+  <!-- Create navbar, menu, submenu, and dropdown classes -->
   <nav class="navbar">
     <input type="checkbox" id="checkbox-toggle" />
     <label for="checkbox-toggle" class="menu-btn"></label>
-
     <ul class="menu">
       <li><a href="../index.html">Home</a></li>
       <li class="submenu">
@@ -35,10 +36,10 @@
       <li class="submenu">
         <a href="#" class="submenu-toggle">About Us<small></small></a>
         <ul class="dropdown">
-          <li><a class="current">Our History</a></li>
-          <li><a href="../about/board.html">Board of Directors</a></li>
-          <li><a href="../about/pastspea.html">Past Speakers</a></li>
-          <li><a href="../about/contact.html">Contact Us</a></li>
+          <li><a href="history.html">Our History</a></li>
+          <li><a href="board.html">Board of Directors</a></li>
+          <li><a href="pastspea.html">Past Speakers</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
         </ul>
       </li>
     </ul>
@@ -75,14 +76,9 @@
     <p>&copy; San Joaquin Valley Paleontologist Club, Fresno, CA 93755</p>
   </footer>
 
-  <!-- <script>
-    document.querySelectorAll('.menu a').forEach(link => {
-      link.addEventListener('click', () => {
-        document.getElementById('checkbox-toggle').checked = false;
-      });
-    });
-  </script> -->
-  <!-- External script for submenu click logic -->
-  <script src="scripts/navbar.js"></script>
+
+  <script src="../scripts/navbar.js"></script>
+  
 </body>
+
 </html>

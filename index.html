@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+  
 <head>
   <meta charset="utf-8">
   <title>San Joaquin Valley Town Hall</title>
@@ -15,10 +16,10 @@
     <h3>Celebrating our <em class="large">75</em><sup>th</sup> Year</h3>
   </header>
 
+  <!-- Create navbar, menu, submenu, and dropdown classes -->
   <nav class="navbar">
     <input type="checkbox" id="checkbox-toggle" />
     <label for="checkbox-toggle" class="menu-btn"></label>
-
     <ul class="menu">
       <li><a class="current">Home</a></li>
       <li class="submenu">
@@ -45,6 +46,8 @@
   </nav>
 
   <main>
+
+    <!-- Speaker section -->
     <aside>
       <h2>Guest speakers</h2>
       <h3>October<br><a href="speakers/brancaccio.html">David Brancaccio</a></h3>
@@ -72,7 +75,7 @@
       <article class="featured">
         <h2>Fossil Threads in the Web of Life</h2>
 
-        <!-- <img src="images/sampson_dinosaur.jpg" alt="Scott Sampson with dinosaur"> -->
+        <!-- Sampson mp4 and jpgs -->
 				<figure>
           <video controls poster="images/sampson_dinosaur.jpg">
             <source src="media/sampson.mp4" type="video/mp4">
@@ -105,38 +108,9 @@
   <footer>
     <p>&copy; San Joaquin Valley Town Hall, Fresno, CA 93755</p>
   </footer>
-  <!-- <script>
-  // Close menu when a normal link is clicked (but not submenu toggles)
-  document.querySelectorAll('.menu a').forEach(link => {
-    link.addEventListener('click', (e) => {
-      if (!link.classList.contains('submenu-toggle')) {
-        document.getElementById('checkbox-toggle').checked = false;
-      }
-    });
-  });
-
-  // Toggle dropdowns when submenu toggles are clicked
-  document.querySelectorAll('.submenu-toggle').forEach(toggle => {
-    toggle.addEventListener('click', (e) => {
-      e.preventDefault(); // prevent default link behavior
-      const dropdown = toggle.nextElementSibling;
-
-      // Close other open dropdowns if you want only one open at a time
-      document.querySelectorAll('.dropdown.open').forEach(openDropdown => {
-        if (openDropdown !== dropdown) {
-          openDropdown.classList.remove('open');
-        }
-      });
-
-      // Toggle the clicked one
-      dropdown.classList.toggle('open');
-    });
-  });
-</script> -->
-
-
 
     <!-- External script for submenu click logic -->
   <script src="scripts/navbar.js"></script>
 </body>
+
 </html>

@@ -15,19 +15,20 @@
 		<h2>San Joaquin Valley Town Hall</h2>
 		<h3>Celebrating our <em class="large">75</em><sup>th</sup> Year</h3>
 	</header>
+	
+	<!-- Create navbar, menu, submenu, and dropdown classes -->
 	<nav class="navbar">
     	<input type="checkbox" id="checkbox-toggle" />
     	<label for="checkbox-toggle" class="menu-btn"></label>
-
     	<ul class="menu">
       		<li><a href="../index.html">Home</a></li>
       		<li class="submenu">
         	<a href="#" class="submenu-toggle">Speakers<small></small></a>
         		<ul class="dropdown">
-          			<li><a href="../speakers/brancaccio.html">David Brancaccio</a></li>
-          			<li><a href="../speakers/sorkin.html">Andrew Ross Sorkin</a></li>
-          			<li><a href="../speakers/chua.html">Amy Chua</a></li>
-          			<li><a href="../speakers/sampson.html">Scott Sampson</a></li>
+          			<li><a href="brancaccio.html">David Brancaccio</a></li>
+          			<li><a href="sorkin.html">Andrew Ross Sorkin</a></li>
+          			<li><a href="chua.html">Amy Chua</a></li>
+          			<li><a href="sampson.html">Scott Sampson</a></li>
         		</ul>
       		</li>
       		<li><a href="../luncheons.html">Luncheons</a></li>
@@ -43,7 +44,9 @@
       		</li>
     	</ul>
   	</nav>
+
 	<main>
+		<!-- Aside for guest speakers with images and links -->
 		<aside>
 			<h2>Guest speakers</h2>
 			<h3>October<br><a href="../speakers/brancaccio.html">David Brancaccio</a></h3>
@@ -55,7 +58,8 @@
 			<h3>February<br><a href="../speakers/sampson.html">Scott Sampson</a></h3>
 			<img src="../images/sampson75.jpg" alt="Scott Sampson photo">
 		</aside>
-		<section>Andrew Sorkin</section>
+
+		<!-- Section for individual speaker details -->
 		<section class="speaker">
     		<h1>Unearthing Life from Deep Time</h1>
 			<article>
@@ -83,19 +87,15 @@
        			resilience and diversity.</p>
 			</article>
 		</section>
+
 	</main>
+
 	<footer>
 		<p>&copy; San Joaquin Valley Town Hall, Fresno, CA 93755</p>
 	</footer>
-		<!-- <script>
-    	document.querySelectorAll('.menu a').forEach(link => {
-      		link.addEventListener('click', () => {
-        		document.getElementById('checkbox-toggle').checked = false;
-      			});
-    		});
-  		</script> -->
-	<!-- External script for submenu click logic -->
-  	<script src="scripts/navbar.js"></script>
+
+  	<script src="../scripts/navbar.js"></script>
+	
 </body>
 
 </html>

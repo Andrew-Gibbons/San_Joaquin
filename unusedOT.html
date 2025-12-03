@@ -15,10 +15,11 @@
 		<h2>San Joaquin Valley Town Hall</h2>
 		<h3>Celebrating our <em class="large">75</em><sup>th</sup> Year</h3>
 	</header>
+
+	<!-- Create navbar, menu, submenu, and dropdown classes -->
 	<nav class="navbar">
     	<input type="checkbox" id="checkbox-toggle" />
     	<label for="checkbox-toggle" class="menu-btn"></label>
-
     	<ul class="menu">
       	<li><a href="index.html">Home</a></li>
       	<li class="submenu">
@@ -35,15 +36,18 @@
       	<li class="submenu">
         	<a href="#" class="submenu-toggle">About Us<small></small></a>
         	<ul class="dropdown">
-          		<li><a href="#">Our History</a></li>
-          		<li><a href="#">Board of Directors</a></li>
-          		<li><a href="#">Past Speakers</a></li>
-          		<li><a href="#">Contact Us</a></li>
+          		<li><a href="about/history.html">Our History</a></li>
+          		<li><a href="about/board.html">Board of Directors</a></li>
+          		<li><a href="about/pastspea.html">Past Speakers</a></li>
+          		<li><a href="about/contact.html">Contact Us</a></li>
         	</ul>
       	</li>
     	</ul>
   	</nav>
+
+	
     <main>
+		<!-- Speaker section -->
 		<aside>
 			<h2>Guest speakers</h2>
 			<div id="speakers">
@@ -57,23 +61,20 @@
 			<img src="images/sampson75.jpg" alt="Scott Sampson photo">
 			</div>
 		</aside>
+
 		<section>
 			<h1>Thank you for ordering tickets!</h1>
 			<p>You should get an email shortly with everything you need to know.</p>
 			<p>Enjoy!</p>
 		</section>
+
 	</main>
+
 	<footer>
 		<p>&copy; San Joaquin Valley Town Hall, Fresno, CA 93755</p>
 	</footer>
-	<!-- <script>
-  		document.querySelectorAll('.menu a').forEach(link => {
-    		link.addEventListener('click', () => {
-      	document.getElementById('checkbox-toggle').checked = false;
-    	});
-  	});
-	</script> -->
-	  	<!-- External script for submenu click logic -->
+
   	<script src="scripts/navbar.js"></script>
 </body>
+
 </html>
